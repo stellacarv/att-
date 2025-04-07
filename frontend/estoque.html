@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gereciamento de Estoque</title>
+    <link rel="stylesheet" href="css/sty.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html">Clientes</a>
+        <a href="estoque.html">Estoque</a>
+    </nav>
+
+    <h1>Produtos Cadastrados</h1>
+    <button id="addEstoqueBtn">Adicionar Produto</button>
+
+    <table id="estoqueTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Marca</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As plantações serão listadas aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar plantação -->
+    <div id="estoqueModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitleEstoque">Adicionar Produto</h2>
+            <form id="estoqueForm">
+                <label for="item">Item:</label>
+                <input type="text" id="item" name="item" required>
+
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="description">Descrição:</label>
+                <input type="text" id="description" name="description" required>
+
+                <label for="brand">Marca:</label>
+                <input type="text" id="brand" name="brand" required>
+
+
+                <button type="submit" id="saveEstoqueBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/estoque.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Maquiagem</title>
+    <link rel="stylesheet" href="css/sty.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html">Clientes</a>
+        <a href="estoque.html">Estoque</a>
+    </nav>
+
+    <h1>Loja de Maquiagem</h1>
+    <button id="addClienteBtn">Adicionar Cliente</button>
+
+    <table id="clienteTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Perfil</th>
+                <th>Gerenciamento</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar usuário -->
+    <div id="clienteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Adicionar Cliente</h2>
+            <form id="clienteForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="profile">Perfil:</label>
+                <select id="profile" name="profile" required>
+                    <option value="cliente">Cliente</option>
+                </select>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="saveClienteBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/cliente.js"></script>
+</body>
+
+</html>
